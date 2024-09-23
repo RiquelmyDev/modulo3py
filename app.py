@@ -18,3 +18,4 @@ def about():
 if __name__ == "__main__": # isso é para garantir, que só quando a gente execute ele de forma manual, vamos subir o servidor dessa forma
   app.run(debug=True)
 
+teste,1 2 3
