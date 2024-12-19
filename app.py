@@ -86,3 +86,20 @@ def delete_task(id):
 if __name__ == "__main__": # isso é para garantir, que só quando a gente execute ele de forma manual, vamos subir o servidor dessa forma
     app.run(debug=True)
 
+
+def generate_random_password(length=12):
+    """
+    Gera uma senha aleatória com o comprimento especificado.
+    
+    :param length: Comprimento da senha (padrão é 12)
+    :return: Senha aleatória gerada
+    """
+    # Define os caracteres que podem ser utilizados na senha
+    characters = string.ascii_letters + string.digits + string.punctuation
+    # Gera a senha aleatória
+    password = ''.join(random.choice(characters) for i in range(length))
+    return password
+
+# Exemplo de uso
+senha = generate_random_password(16)
+print(f"Senha gerada: {senha}")
